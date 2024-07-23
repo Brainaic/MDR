@@ -1,0 +1,44 @@
+[15-Jul-2024 13:34:55 UTC] PHP Warning:  require(employee/PHPMailer/PHPMailerAutoload.php): Failed to open stream: No such file or directory in /home/polacttn/public_html/employeecard/send_email.php on line 2
+[15-Jul-2024 13:34:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'employee/PHPMailer/PHPMailerAutoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/polacttn/public_html/employeecard/send_email.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/polacttn/public_html/employeecard/send_email.php on line 2
+[15-Jul-2024 13:36:53 UTC] PHP Warning:  require(/employee/PHPMailer/PHPMailerAutoload.php): Failed to open stream: No such file or directory in /home/polacttn/public_html/employeecard/send_email.php on line 2
+[15-Jul-2024 13:36:53 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/employee/PHPMailer/PHPMailerAutoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/polacttn/public_html/employeecard/send_email.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/polacttn/public_html/employeecard/send_email.php on line 2
+[15-Jul-2024 13:39:03 UTC] PHP Warning:  require(employeecard/PHPMailer/PHPMailerAutoload.php): Failed to open stream: No such file or directory in /home/polacttn/public_html/employeecard/send_email.php on line 2
+[15-Jul-2024 13:39:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'employeecard/PHPMailer/PHPMailerAutoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home/polacttn/public_html/employeecard/send_email.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/polacttn/public_html/employeecard/send_email.php on line 2
+[15-Jul-2024 14:02:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_magic_quotes_runtime() in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php:2689
+Stack trace:
+#0 /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php(2660): PHPMailer->encodeFile()
+#1 /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php(2310): PHPMailer->attachAll()
+#2 /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php(1275): PHPMailer->createBody()
+#3 /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php(1210): PHPMailer->preSend()
+#4 /home/polacttn/public_html/employeecard/send_email.php(62): PHPMailer->send()
+#5 {main}
+  thrown in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2689
+[15-Jul-2024 14:05:07 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2690
+[15-Jul-2024 14:05:07 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2702
+[15-Jul-2024 14:13:16 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2690
+[15-Jul-2024 14:13:16 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2702
+[15-Jul-2024 20:37:05 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2690
+[15-Jul-2024 20:37:05 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2702
+[15-Jul-2024 20:50:31 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2690
+[15-Jul-2024 20:50:31 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2702
+[16-Jul-2024 19:49:10 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2690
+[16-Jul-2024 19:49:10 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2702
+[16-Jul-2024 19:49:27 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2690
+[16-Jul-2024 19:49:27 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2702
+[16-Jul-2024 20:17:19 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2690
+[16-Jul-2024 20:17:19 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2702
+[16-Jul-2024 20:31:22 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2690
+[16-Jul-2024 20:31:22 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2702
+[16-Jul-2024 20:36:46 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2690
+[16-Jul-2024 20:36:46 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2702
+[16-Jul-2024 20:39:57 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2690
+[16-Jul-2024 20:39:57 UTC] PHP Warning:  Undefined variable $magic_quotes in /home/polacttn/public_html/employeecard/PHPMailer/class.phpmailer.php on line 2702

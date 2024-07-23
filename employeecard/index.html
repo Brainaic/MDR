@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polarview resources | Employee data</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #5E8023;
+        }
+        .container {
+            max-width: 1300px;
+            margin: auto;
+            padding: 50px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            margin-top: 0;
+            color: #150330;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            background-color: #5E8023;
+            color: #fff;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #fff;
+            color: #150330;
+            transition: 1s ease-in-out;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <br><br><br>
+    <img src="/logooo.png" style="width: 15rem; margin: auto; position: relative; display: block; border-radius: 20px;">
+    <br>
+    <marquee style="color: #fff; font-size: 20px; ">
+        Dear Employee, Please fill this data card correctly. thank you!
+    </marquee>
+    <br><br>
+    <div class="container">
+        <h2 style="font-size: 35px;">Polarview Resources Employee Data Card</h2>
+        <form id="employee-form">
+            <!-- Basic Information -->
+            <h3>Basic Information</h3>
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="FIRST NAME" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="LAST NAME" required>
+            </div>
+            <div class="form-group">
+                <label for="middle-name">Middle Name:</label>
+                <input type="text" id="middle-name" name="MIDDLE NAME">
+            </div>
+            <div class="form-group">
+                <label for="social-security-number">Social Security Number:</label>
+                <input type="text" id="social_security_number" name="SSN" required>
+            </div>
+            <div class="form-group">
+                <label for="date-of-birth">Date of Birth:</label>
+                <input type="date" id="date-of-birth" name="DATE OF BIRTH" required>
+            </div>
+            <div class="form-group">
+                <label for="hire-date">Hire Date:</label>
+                <input type="date" id="hire-date" name="HIRE DATE" required>
+            </div>
+            <div class="form-group">
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="POSITION" required>
+            </div>
+            <div class="form-group">
+                <label for="mailing-address">Mailing Address:</label>
+                <input type="text" id="mailing-address" name="MAILING ADDRESS" required>
+            </div>
+            <div class="form-group">
+                <label for="email-address">Email Address:</label>
+                <input type="email" id="email-address" name="EMAIL ADDRESS" required>
+            </div>
+
+            <!-- Optional and Voluntary Information -->
+            <h3>Optional and Voluntary Information</h3>
+            <div class="form-group">
+                <label for="ethnic-identification">Ethnic Identification:</label>
+                <select id="ethnic-identification" name="ETHNIC IDENTIFICATION">
+                    <option value="">Select</option>
+                    <option value="White (not of Hispanic origin)">White (not of Hispanic origin)</option>
+                    <option value="African American and black (Not of Hispanic origin)">African American and black (Not of Hispanic origin)</option>
+                    <option value="Latin or Hispanic">Latin or Hispanic</option>
+                    <option value="American Indian or Alaskan native">American Indian or Alaskan native</option>
+                    <option value="Asian or Pacific Islander">Asian or Pacific Islander</option>
+                    <option value="Female">Prefer not to share</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="GENDER">
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Female">Prefer not to share</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="veteran-status">Veteran Status:</label>
+                <select id="veteran-status" name="VETERAN STATUS">
+                    <option value="">Select</option>
+                    <option value="No military service">No military service</option>
+                    <option value="Military veteran">Military veteran</option>
+                    <option value="Female">Prefer not to share</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="marital-status">Marital Status:</label>
+                <select id="marital-status" name="MARITAL STATUS">
+                    <option value="">Select</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Female">Prefer not to share</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="disabled">Disabled:</label>
+                <select id="disabled" name="DISABLED">
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Female">Prefer not to share</option>
+                </select>
+            </div>
+
+            <!-- Emergency Contact Information -->
+            <h3>Emergency Contact Information</h3>
+            <div class="form-group">
+                <label for="emergency-first-name">First Name:</label>
+                <input type="text" id="emergency-first-name" name="EMERGENCY FIRST NAME" required>
+            </div>
+            <div class="form-group">
+                <label for="emergency-last-name">Last Name:</label>
+                <input type="text" id="emergency-last-name" name="EMERGENCY LAST NAME" required>
+            </div>
+            <div class="form-group">
+                <label for="emergency-relationship">Relationship:</label>
+                <input type="text" id="emergency-relationship" name="EMERGENCY RELATIONSHIP" required>
+            </div>
+            <div class="form-group">
+                <label for="emergency-phone-number">Phone Number:</label>
+                <input type="tel" id="emergency-phone-number" name="EMERGENCY PHONE NUMBER" required>
+            </div>
+            <div class="form-group">
+                <label for="emergency-mailing-address">Mailing Address:</label>
+                <input type="text" id="emergency-mailing-address" name="EMERGENCY MAILING ADDRESS" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <br><br><br>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Dear employee, This form has been completed, thank you!</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('employee-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            const formData = new FormData(event.target);
+            let content = '';
+
+            formData.forEach((value, key) => {
+                content += `${key}: ${value}\n`;
+            });
+
+            doc.text(content, 10, 10);
+
+            // Save the PDF to a blob
+            const pdfBlob = doc.output('blob');
+
+            // Prepare the form data for PHP
+            const phpFormData = new FormData();
+            phpFormData.append('pdf', pdfBlob, 'employee_information.pdf');
+            formData.forEach((value, key) => {
+                phpFormData.append(key, value);
+            });
+
+            // Send the form data to the PHP script
+            fetch('/employeecard/send_email.php', {
+                method: 'POST',
+                body: phpFormData
+            })
+            .then(response => response.text())
+            .then(result => {
+                if (result.trim() === 'success') {
+                    // Show the modal
+                    const modal = document.getElementById('myModal');
+                    modal.style.display = 'block';
+                } else {
+                    alert('Error: ' + result);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+        // Close the modal when the user clicks on <span> (x)
+       document.querySelector('.close').onclick = function() {
+    window.location.href = 'https://polarviewresources.xyz/employeecard/'; // Replace with your desired URL
+};
+
+
+        // Close the modal when the user clicks anywhere outside of the modal
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

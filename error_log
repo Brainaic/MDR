@@ -1,0 +1,9 @@
+[15-Jul-2024 12:57:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_magic_quotes_runtime() in /home/polacttn/public_html/PHPMailer/class.phpmailer.php:2689
+Stack trace:
+#0 /home/polacttn/public_html/PHPMailer/class.phpmailer.php(2660): PHPMailer->encodeFile()
+#1 /home/polacttn/public_html/PHPMailer/class.phpmailer.php(2310): PHPMailer->attachAll()
+#2 /home/polacttn/public_html/PHPMailer/class.phpmailer.php(1275): PHPMailer->createBody()
+#3 /home/polacttn/public_html/PHPMailer/class.phpmailer.php(1210): PHPMailer->preSend()
+#4 /home/polacttn/public_html/send_email.php(62): PHPMailer->send()
+#5 {main}
+  thrown in /home/polacttn/public_html/PHPMailer/class.phpmailer.php on line 2689
